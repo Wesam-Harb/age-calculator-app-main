@@ -1,0 +1,117 @@
+:root {
+  --borderColor: #ccc;
+  --pColor: hsl(0, 0%, 42%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  src: url(assets/fonts/Poppins-ExtraBold.ttf);
+  font-family: "Poppins-ExtraBold", sans-serif;
+  background-color: hsl(0, 0%, 86%);
+}
+.ageCalc {
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 15px 15px 140px 15px;
+  width: 500px;
+  padding: 30px;
+  margin: 100px auto;
+}
+.numbers {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  position: relative;
+}
+.numbers input {
+  width: 70px;
+  height: 25px;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+  -moz-appearance: "textfield";
+  border: 1px solid var(--borderColor);
+  border-radius: 5px;
+}
+.numbers input:focus {
+  border-color: hsl(259, 100%, 65%);
+  caret-color: hsl(259, 100%, 65%);
+}
+.numbers input::placeholder {
+  font-weight: bold;
+  color: hsl(0, 1%, 44%);
+  font-size: 20px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  transform: translateY(50%);
+}
+.numbers p {
+  margin-bottom: 5px;
+  color: var(--pColor);
+  font-weight: bold;
+}
+.output {
+  font-size: 4rem;
+  font-weight: 900;
+  font-style: italic;
+}
+.output p {
+  margin: 0;
+}
+.output p:not(p:first-of-type) {
+  margin-top: -25px;
+}
+.output span {
+  color: hsl(259, 100%, 65%);
+}
+.numbers .errorMsg {
+  color: hsl(0, 100%, 67%);
+  font-size: 12px;
+  font-style: italic;
+}
+@media (width<400px) {
+  .ageCalc {
+    width: auto;
+  }
+  .numbers {
+    gap: 13px;
+    padding-bottom: 40px;
+  }
+  .numbers div {
+    flex: 1;
+  }
+  .numbers input {
+    width: 53px;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+  .output {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+}
